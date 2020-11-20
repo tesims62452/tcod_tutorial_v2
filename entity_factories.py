@@ -62,7 +62,7 @@ demon = Actor(
 )
 
 skeleton = Actor(
-    char="S",
+    char="s",
     color=(77, 0, 0),
     name="Skeleton",
     ai_cls=HostileEnemy,
@@ -72,6 +72,16 @@ skeleton = Actor(
     level=Level(xp_given=50),
 )
 
+grimm_reaper = Actor(
+    char="R",
+    color=(6, 0, 13),
+    name="Grimm Reaper",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=30, base_defense=8, base_power=20),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
 
 confusion_scroll = Item(
     char="~",
@@ -93,6 +103,13 @@ tornado_kitty = Item(
     consumable=consumable.TornadoKittyDamageConsumable(damage=11, radius=3),
 )
 
+large_health_potion = Item(
+    char="!",
+    color=(102,204,255),
+    name="Large Health Potion",
+    consumable=consumable.HealingConsumable(amount=15),
+)
+
 medium_health_potion = Item(
     char="!",
     color=(230,251,255),
@@ -110,7 +127,7 @@ void_scroll = Item(
     char="~",
     color=(255,25,102),
     name="Void Scroll",
-    consumable=consumable.LightningDamageConsumable(damage=200000000, maximum_range=5),
+    consumable=consumable.VoidDamageConsumable(damage=20000, maximum_range=4),
 )
 
 lightning_scroll = Item(
@@ -121,12 +138,14 @@ lightning_scroll = Item(
 )
 
 dagger = Item(
-    char="/", color=(0, 131, 255), name="Dagger", equippable=equippable.Dagger()
+    char="/", color=(0, 131, 255), name="WoodenDagger", equippable=equippable.Dagger()
 )
 
 sword = Item(char="/", color=(0, 91, 255), name="Sword", equippable=equippable.Sword())
 
 boofy_sword = Item(char="/", color=(0, 77, 0), name="Boofy Sword", equippable=equippable.BoofySword())
+
+demon_sword = Item(char="/", color=(26, 0, 0), name="Demon Sword", equippable=equippable.DemonSword())
 
 
 leather_armor = Item(
