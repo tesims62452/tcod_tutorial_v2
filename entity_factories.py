@@ -52,12 +52,6 @@ fireball_scroll = Item(
     consumable=consumable.FireballDamageConsumable(damage=12, radius=3),
 )
 
-tornado_kitty = Item(
-    char="&",
-    color=(122, 56, 21),
-    name="Tornado Kitty",
-    consumable=consumable.TornadoKittyDamageConsumable(damage=11, radius=3),
-
 
 lightning_scroll = Item(
     char="~",
