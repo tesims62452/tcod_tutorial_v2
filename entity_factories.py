@@ -58,17 +58,19 @@ tornado_kitty = Item(
     name="Tornado Kitty",
     consumable=consumable.TornadoKittyDamageConsumable(damage=11, radius=3),
 
-health_potion = Item(
-    char="!",
-    color=(127, 0, 255),
-    name="Health Potion",
-    consumable=consumable.HealingConsumable(amount=4),
-)
+
 lightning_scroll = Item(
     char="~",
     color=(255, 255, 0),
     name="Lightning Scroll",
     consumable=consumable.LightningDamageConsumable(damage=20, maximum_range=5),
+)
+
+health_potion = Item(
+    char="!",
+    color=(127, 0, 255),
+    name="Health Potion",
+    consumable=consumable.HealingConsumable(amount=4),
 )
 
 dagger = Item(
