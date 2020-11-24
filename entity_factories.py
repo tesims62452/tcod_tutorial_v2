@@ -80,7 +80,7 @@ grimm_reaper = Actor(
     equipment=Equipment(),
     fighter=Fighter(hp=30, base_defense=8, base_power=20),
     inventory=Inventory(capacity=0),
-    level=Level(xp_given=50),
+    level=Level(xp_given=200),
 )
 
 confusion_scroll = Item(
@@ -127,7 +127,7 @@ void_scroll = Item(
     char="~",
     color=(255,25,102),
     name="Void Scroll",
-    consumable=consumable.VoidDamageConsumable(damage=20000, maximum_range=4),
+    consumable=consumable.VoidDamageConsumable(damage=20000, radius=4),
 )
 
 lightning_scroll = Item(
@@ -156,9 +156,13 @@ leather_armor = Item(
 )
 
 boofy_armor = Item(
-    char="[", color=(51,0,77), name="Boofy Armor", equippable=equippable.BoofyArmor()
+    char="[", color=(51, 0, 77), name="Boofy Armor", equippable=equippable.BoofyArmor()
 )
 
 chain_mail = Item(
     char="[", color=(139, 69, 19), name="Chain Mail", equippable=equippable.ChainMail()
+)
+
+demon_armor = Item(
+    char="[", color=(179, 0, 30), name="Demon Armor", equippable=equippable.DemonArmor()
 )
